@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="eng">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Francesco Cittadino</title>
+    <style>
+        label {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <label for="email">insert mail andress</label>
+        <input type="email" name="email" id="email">
+
+        <label for="password">insert password key</label>
+        <input type="password" name="password" id="password">
+
+        <label for="name">insert name</label>
+        <input type="text" name="name" id="name">
+
+        <label for="lastname">insert lastname</label>
+        <input type="text" name="lastname" id="lastname">
+
+        <label for="date">date of birth</label>
+        <input type="date" name="date" id="date">
+
+        <label for="numberCell">Telephone number</label>
+        <input type="number" name="numberCell" id="numberCell">
+
+
+        <label for="plan"></label>
+        <select name="plan" id="plan">
+            <option>--select--</option>
+            <option value="0">free plan</option>
+            <section>
+                <option value="5">silver 5€</option>
+                <option value="10">gold 10€</option>
+                <option value="20">platinum 20€</option>
+            </section>
+        </select>
+
+        <label for="proPlan">pro plan</label>
+        <input type="checkbox" name="proPlan" id="proPlan" value="50">
+
+        <label for="crediCard">number of credit card</label>
+        <input type="number" name="crediCard" id="creditCard" minlength="16" maxlength="16">
+
+        <label for="cvc">cvc</label>
+        <input type="number" name="cvc" id="cvc" minlength="3" maxlength="4">
+
+        <label for="expiration">month and year of expiration</label>
+        <input type="month" name="expiration" id="expiration">
+
+        <label for="billing">Billing Andress</label>
+        <input type="text" name="billing" id="billing">
+    </form>
+</body>
+
+</html>
