@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Francesco Cittadino</title>
+  <style>
+    label {
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+  <form action="#">
+    <p></p>required field<b><abbr title="required-field">*</abbr><b>
+        <div>
+          <!--adding feature "abbr" in all fields && required attribute-->
+
+          <label for="form-email">Email</label>
+          <b><abbr title="required-field">*</abbr><b></b>
+            <input type="email" id="form-email" name="email" required />
+
+
+            <label for="form-pass">Password</label>
+            <b><abbr title="required-field">*</abbr><b></b>
+              <input type="password" id="form-pass" name="pass" title="Six or more characters" required />
+
+        </div>
+        <div>
+
+          <label for="form-name">Name and surname</label>
+          <b><abbr title="required-field">*</abbr><b></b>
+            <input type="text" id="form-name" name="name" required />
+
+            <label for="form-dob">Date of birth</label>
+            <b><abbr title="required-field">*</abbr><b></b>
+              <input type="date" id="form-dob" name="dob" required />
+
+              <label for="form-tel">Phone number</label>
+              <b><abbr title="required-field">*</abbr><b></b>
+                <!--change type value with number-->
+                <input type="number" id="form-tel" name="tel" required />
+
+        </div>
+        <div>
+
+          <label for="form-plan">Plans <b><abbr title="required-field">*</abbr><b></b>
+          </label>
+          <select id="form-plan" name="plan" required>
+
+            <option value="0">Free</option>
+            <optgroup label="Monthly">
+              <option value="199">1.99€/month</option>
+              <option value="599">5.99€/month</option>
+              <option value="1199">11.99€/month</option>
+            </optgroup>
+          </select>
+
+          <label for="form-pro">PRO plan</label>
+          <b><abbr title="required-field">*</abbr><b></b>
+            <input id="form-pro" name="pro" type="checkbox" required />
+
+        </div>
+        <div>
+
+          <label for="form-cc">Credit card number</label>
+          <b><abbr title="required-field">*</abbr><b></b>
+            <!--type value=text for attribute pattern-->
+            <input id="form-cc" name="cc" type="text" pattern="[0-9]{16}" title="required 16 numbers" required />
+
+            <label for="form-cvc">CVC</label>
+            <!--type value=text for attribute pattern-->
+            <b><abbr title="required-field">*</abbr><b></b>
+              <input id="form-cvc" name="cvc" type="text" pattern="[0-9]{3,4}" title="required 3-4 numbers" required />
+
+              <label for="form-exp">Expiration date</label>
+              <b><abbr title="required-field">*</abbr><b></b>
+                <!--change value type with month-->
+                <input id="form-exp" name="exp" type="month" required />
+
+                <label for="form-address">Address</label>
+                <b><abbr title="required-field">*</abbr><b></b>
+                  <input type="text" id="form-address" name="address" required />
+
+        </div>
+
+        <button type="submit">Submit</button>
+  </form>
+</body>
+
+</html>

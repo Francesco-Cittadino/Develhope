@@ -1,0 +1,56 @@
+body {
+    width: 60em;
+    margin: 0 auto;
+    display: grid;
+    grid-template-areas: 
+    "gr gr gr gr gr gr"
+    "y y r r b b"
+    "y y r r b b"
+    "o o o o b b";
+}
+ul{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+}
+section {
+    padding: 2em;
+    margin: 1em;
+}
+
+#green {
+    grid-area: gr;
+    background-color: #8ffda7;
+}
+
+#yellow {
+    grid-area: y;
+    background-color: #ffff92;
+}
+
+#red {
+    grid-area:r;
+    display: grid;
+    background-color: #ff919c;
+}
+
+#blue {
+    grid-area: b;
+    background-color: #98d2ff;
+}
+
+#orange {
+    grid-area:o;
+    background-color: #ffc788;
+}
+
+ul {
+    padding: 0;
+}
+
+li {
+    background-color: white;
+    padding: 1em;
+    display: block;
+    margin: 1em;
+}

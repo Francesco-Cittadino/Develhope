@@ -1,0 +1,36 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+#navSecond > ul {
+    display: flex;
+    padding: 1rem;
+    list-style: none;
+}
+li {
+    margin-right: 1rem;
+}
+#btnSrc:hover {
+    background-color: green;
+    color: white;
+}
+#firstNav {
+    display: none;
+}
+a {
+    text-decoration: none;
+}
+@media screen and (max-width: 768px){
+    #navSecond {
+        display: none;
+    }
+    #firstNav {
+        display: initial;
+        padding: 2rem;
+    }
+    img {
+        width: 32px;
+    }
+
+
+}
