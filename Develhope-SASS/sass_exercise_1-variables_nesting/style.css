@@ -1,0 +1,27 @@
+.exercise {
+  border: 1px solid red;
+  display: flex;
+  flex-wrap: wrap;
+}
+.exercise .exercise-title {
+  text-align: center;
+  width: 100%;
+  color: green;
+}
+.exercise .colorRed {
+  color: red;
+}
+.exercise .colorBlue {
+  color: blue;
+}
+.exercise article {
+  padding: 1rem 0.5rem;
+  border: 1px solid green;
+}
+
+.secFlex {
+  display: flex;
+  margin: 2rem;
+}
+
+/*# sourceMappingURL=style.css.map */
