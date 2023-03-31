@@ -1,0 +1,41 @@
+@mixin border($colorText, $border, $textSize) {
+    color: $colorText;
+    border: 1px solid $border;
+    font-size: $textSize;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+div {
+    @include border(none, red, none);
+    h1 {
+        @include border(green, none, none);
+        text-align: center;
+        width: 100vw;
+        text-decoration: underline blue;
+    }
+    section {
+
+
+        &:first-of-type {
+
+            display: flex;
+            article {
+                @include border(none, green, none);
+                &:nth-child(odd) {
+                    color: blue;
+                }
+                &:nth-child(even) {
+                    color: red;
+                }
+            }
+        }
+        &:last-child {
+            @include border(green, blue, none);
+            margin-top: 1rem;
+            text-align: center;
+            font-size: x-large;
+        }
+    }
+
+}
