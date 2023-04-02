@@ -1,0 +1,7 @@
+@import 'allVariable';
+@function pixelToRem($pixel){
+    @return calc($pixel/$rem)+rem;
+}
+
+$myColor: gray;
+

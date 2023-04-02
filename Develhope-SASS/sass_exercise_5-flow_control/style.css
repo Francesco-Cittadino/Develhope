@@ -1,0 +1,146 @@
+div {
+  color: none;
+  border: 1px solid red;
+  font-size: none;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+div h1, div h2 {
+  color: green;
+  border: 1px solid none;
+  font-size: none;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  text-align: center;
+  width: 100vw;
+  font-size: 3.125rem;
+  text-decoration: underline blue;
+  max-width: calc(100% - 2rem);
+  box-shadow: 5px 10px gray;
+}
+div h2 {
+  padding: 1rem;
+  border: 3px solid red;
+}
+div section:first-of-type {
+  display: flex;
+}
+div section:first-of-type article {
+  color: none;
+  border: 1px solid green;
+  font-size: none;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+div section:first-of-type article:nth-child(odd) {
+  color: blue;
+}
+div section:first-of-type article:nth-child(even) {
+  color: red;
+}
+div section:last-child {
+  color: green;
+  border: 1px solid blue;
+  font-size: none;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  margin-top: 1rem;
+  text-align: center;
+  font-size: x-large;
+}
+
+#numbers {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 2rem 0;
+}
+#numbers div:nth-child(1) {
+  background-color: #f2f2f2;
+  color: #0d0d0d;
+}
+#numbers div:nth-child(2) {
+  background-color: #e6e6e6;
+  color: #1a1a1a;
+}
+#numbers div:nth-child(3) {
+  background-color: #d9d9d9;
+  color: #262626;
+}
+#numbers div:nth-child(4) {
+  background-color: #cccccc;
+  color: #333333;
+}
+#numbers div:nth-child(5) {
+  background-color: #bfbfbf;
+  color: #404040;
+}
+#numbers div:nth-child(6) {
+  background-color: #b3b3b3;
+  color: #4d4d4d;
+}
+#numbers div:nth-child(7) {
+  background-color: #a6a6a6;
+  color: #595959;
+}
+#numbers div:nth-child(8) {
+  background-color: #999999;
+  color: #666666;
+}
+#numbers div:nth-child(9) {
+  background-color: #8c8c8c;
+  color: #737373;
+}
+#numbers div:nth-child(10) {
+  background-color: blue;
+  color: red;
+}
+#numbers div:nth-child(11) {
+  background-color: #737373;
+  color: #8c8c8c;
+}
+#numbers div:nth-child(12) {
+  background-color: #666666;
+  color: #999999;
+}
+#numbers div:nth-child(13) {
+  background-color: #595959;
+  color: #a6a6a6;
+}
+#numbers div:nth-child(14) {
+  background-color: #4d4d4d;
+  color: #b3b3b3;
+}
+#numbers div:nth-child(15) {
+  background-color: #404040;
+  color: #bfbfbf;
+}
+#numbers div:nth-child(16) {
+  background-color: #333333;
+  color: #cccccc;
+}
+#numbers div:nth-child(17) {
+  background-color: #262626;
+  color: #d9d9d9;
+}
+#numbers div:nth-child(18) {
+  background-color: #1a1a1a;
+  color: #e6e6e6;
+}
+#numbers div:nth-child(19) {
+  background-color: #0d0d0d;
+  color: #f2f2f2;
+}
+
+.fs-1rem,
+.fs-2rem,
+.fs-3rem {
+  width: 2.8125rem;
+  height: 2.8125rem;
+}
+
+/*# sourceMappingURL=style.css.map */

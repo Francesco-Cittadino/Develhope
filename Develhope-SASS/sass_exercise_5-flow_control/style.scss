@@ -1,0 +1,86 @@
+@use "allVariable.scss";
+@use "sass:color";
+@import 'function';
+
+@mixin border($colorText, $border, $textSize) {
+    color: $colorText;
+    border: 1px solid $border;
+    font-size: $textSize;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+
+div {
+    @include border(none, red, none);
+    h1 {
+        @include border(green, none, none);
+        text-align: center;
+        width: 100vw;
+        font-size: pixelToRem(50);
+        text-decoration: underline blue;
+        max-width: calc(100% - 2rem);
+        box-shadow: 5px 10px gray;
+    }
+    & h2 {
+        @extend h1;
+        padding: 1rem;
+        border: 3px solid red;
+
+    }
+    section {
+        &:first-of-type {
+            display: flex;
+            article {
+                @include border(none, green, none);
+                &:nth-child(odd) {
+                    color: blue;
+                }
+                &:nth-child(even) {
+                    color: red;
+                }
+            }
+        }
+        &:last-child {
+            @include border(green, blue, none);
+            margin-top: 1rem;
+            text-align: center;
+            font-size: x-large;
+        }
+
+    }
+
+}
+#numbers {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2rem 0;
+    & div {
+
+        @for $i from 1 to 20 {
+            &:nth-child(#{$i}) {
+                @if $i == 10 {
+                    background-color: allVariable.$color-secondary;
+                    color: allVariable.$color-primary;
+                }
+            @else
+                {
+                    background-color: color.adjust(white, $lightness: -($i * 5%));
+                    color: color.adjust(black, $lightness: +($i * 5%));
+                }
+            }
+        }
+    }
+}
+
+.fs-1rem,
+.fs-2rem,
+.fs-3rem {
+
+    width: pixelToRem(45);
+    height: pixelToRem(45);
+
+
+}
