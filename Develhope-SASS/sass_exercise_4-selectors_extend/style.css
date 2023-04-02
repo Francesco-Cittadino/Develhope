@@ -1,0 +1,56 @@
+div {
+  color: none;
+  border: 1px solid red;
+  font-size: none;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+div h1, div h2 {
+  color: green;
+  border: 1px solid none;
+  font-size: none;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  text-align: center;
+  width: 100vw;
+  font-size: 3.125rem;
+  text-decoration: underline blue;
+  max-width: calc(100% - 2rem);
+  box-shadow: 5px 10px gray;
+}
+div h2 {
+  padding: 1rem;
+  border: 3px solid red;
+}
+div section:first-of-type {
+  display: flex;
+}
+div section:first-of-type article {
+  color: none;
+  border: 1px solid green;
+  font-size: none;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+div section:first-of-type article:nth-child(odd) {
+  color: blue;
+}
+div section:first-of-type article:nth-child(even) {
+  color: red;
+}
+div section:last-child {
+  color: green;
+  border: 1px solid blue;
+  font-size: none;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  margin-top: 1rem;
+  text-align: center;
+  font-size: x-large;
+}
+
+/*# sourceMappingURL=style.css.map */
