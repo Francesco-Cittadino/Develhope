@@ -1,6 +1,7 @@
 @use "allVariable.scss";
 @use "sass:color";
 @import 'function';
+@import "allVariable";
 
 @mixin border($colorText, $border, $textSize) {
     color: $colorText;
@@ -8,7 +9,6 @@
     font-size: $textSize;
     display: flex;
     flex-direction: column;
-    padding: 1rem;
 }
 
 
@@ -54,9 +54,10 @@ div {
 }
 #numbers {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 2rem 0;
+    justify-content: space-between ;
+    padding:2rem 0;
+    width: 100%;
+
     & div {
 
         @for $i from 1 to 20 {
@@ -64,7 +65,9 @@ div {
                 @if $i == 10 {
                     background-color: allVariable.$color-secondary;
                     color: allVariable.$color-primary;
-                }
+
+       
+            }
             @else
                 {
                     background-color: color.adjust(white, $lightness: -($i * 5%));
@@ -72,6 +75,7 @@ div {
                 }
             }
         }
+        
     }
 }
 
@@ -83,4 +87,9 @@ div {
     height: pixelToRem(45);
 
 
+}
+@each $fontSize in $remSize{
+    .fs-#{$fontSize}{
+        font-size: $fontSize;
+    }
 }
