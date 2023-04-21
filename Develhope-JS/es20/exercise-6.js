@@ -1,4 +1,4 @@
-class Square {r
+class Square {
   constructor(side) {
     this.side = side;
   }
@@ -16,9 +16,24 @@ class Circle {
     this.radius = radius;
   }
 }
+// Definisci una classe chiamata `AreaCalculator`. 
+// Al suo interno, create un metodo statico che vi permetta di calcolare l'area della figura geometrica passata come parametro. 
+// Il metodo ti permetterà di calcolare l'area del quadrato, del rettangolo e del cerchio.
 
 class AreaCalculator {
-  // ...
+  static calculate (parameter){
+ if(parameter == square){
+  this.area = parameter.side * parameter.side;
+}else if(parameter == rectangle){
+  this.area = parameter.width * parameter.height;
+}else if(parameter == circle){
+  this.area = parameter.radius * parameter.radius * Math.PI
+}
+else{
+console.log("is not a geometric figure");
+}
+return this.area;
+}
 }
 
 const square = new Square(4);
