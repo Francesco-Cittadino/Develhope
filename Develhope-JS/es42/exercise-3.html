@@ -1,0 +1,52 @@
+<html>
+
+<body>
+  <div id="container">
+    <form>
+      <div>
+        <label>Title</label>
+        <input type="text" id="todo-title" />
+      </div>
+      <div>
+        <label>Completed</label>
+        <input type="checkbox" id="todo-completed" />
+      </div>
+
+      <button type="submit" id="submit-todo"></button>
+    </form>
+  </div>
+</body>
+
+</html>
+
+<script>
+  // Usando async e wait, implementa il codice necessario per eseguire una richiesta HTTP POST. 
+
+  // Per creare un nuovo post, utilizza il seguente URL: https://jsonplaceholder.typicode.com/posts (Metodo: Post). 
+  // Il corpo della richiesta deve contenere un oggetto post con le seguenti informazioni:
+  //  `title` e Flag `completed`. I dati postali devono essere trasmessi a seguito della compilazione di un form.
+
+
+const btnVar = document.getElementById("submit-todo");
+const inVar = document.getElementById("todo-title");
+  let checkVar = document.getElementById("todo-completed");
+  btnVar.addEventListener("click", function (val) {
+    val.preventDefault();
+    const post = {
+      title: inVar.value,
+      completed: checkVar.checked,
+    };
+
+    async function retData(url) {
+      let res = await fetch(url, {
+        method: "POST",
+        body: JSON.stringify(post),
+        headers: { "Content-type": "application/json; charset=UTF-8" },
+      });
+      const json = await res.json();
+      console.log(json);
+    }
+
+    retData("https://jsonplaceholder.typicode.com/posts");
+  });
+</script>
