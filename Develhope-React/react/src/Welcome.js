@@ -3,10 +3,11 @@ import React from "react";
 // che riceva un secondo prop chiamato age e lo visualizzi sotto il messaggio 
 // 'welcome', all'interno di un tag p dopo il messaggio "Your age is ".
 class Welcome extends React.Component {
-    render(name) {
+    render() {
         return (
             <div>
-                <p>Welcome {name = "Francesco Cittadino"} </p>
+                <h1 className="hOne">Welcome</h1>
+                <p><strong>{this.props.name}</strong></p>
                 <p>Your age is {this.props.age}</p>
             </div>
         )

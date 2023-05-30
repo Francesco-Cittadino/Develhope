@@ -13,7 +13,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <Welcome age={32} />
+        <Welcome name="Francesco Cittadino" age={32} />
       </header>
     </div>
   );
