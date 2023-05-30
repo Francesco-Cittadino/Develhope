@@ -1,13 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
-import Age from './Age';
+import Welcome from './Welcome';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <Age age={32} />
+        <Welcome name="Francesco Cittadino" />
       </header>
     </div>
   );
