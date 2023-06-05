@@ -6,7 +6,7 @@ class Welcome extends React.Component {
         return (
             <div>
                 <h1 className="hOne">Welcome</h1>
-                <p><strong>{this.props.name === "John" && this.props.name}</strong></p>
+                <p><strong>{this.props.name}</strong></p>
                 <p><Age age={32} /> </p>
             </div>
         )
