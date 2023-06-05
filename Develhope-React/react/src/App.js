@@ -8,7 +8,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <Welcome name="Francesco Cittadino" />
-        <Counter />
+        <Counter initialValue={0} incValue={1} intervalValue={1000}/>
       </header>
     </div>
   );
