@@ -9,7 +9,9 @@ class Counter extends React.Component {
         }, this.props.intervalValue)
     }
     render() {
-        return <h1>Counter : {this.state.count}</h1>
+        return <>
+        count : {this.state.count}
+        </>
     }
 }
 export default Counter
