@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import Welcome from './Welcome';
+import InteractiveWelcome from './InteractiveWelcome ';
 import Counter from "./Counter";
 import ClickTracker from './ClickTracker';
 // Modificare il componente Counter in modo 
@@ -12,7 +12,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <Welcome name="Francesco Cittadino" />
+        <InteractiveWelcome />
         <Counter />
         <ClickTracker/>
       </header>
