@@ -1,12 +1,6 @@
 import React from "react";
 
 class UncontrolledLogin extends React.Component {
-    // handleSubmit = (event) => {
-    //     event.preventDefault();
-    //     const username = this.username.value;
-    //     const password = this.password.value;
-    //     console.log(`user = ${username} pass = ${password}`);
-    // }
     constructor(props) {
         super(props);
         this.handleSubmit = this.handleSubmit.bind(this);
