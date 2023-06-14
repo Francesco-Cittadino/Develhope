@@ -5,6 +5,7 @@ class ClickTracker extends React.Component {
         event.preventDefault();
         const val = event.target.name;
         const res = document.querySelector('#uno');
+        
         res.append(val);
     }
      

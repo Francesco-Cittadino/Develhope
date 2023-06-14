@@ -3,6 +3,7 @@ import './App.css';
 import InteractiveWelcome from './InteractiveWelcome ';
 import Counter from "./Counter";
 import ClickTracker from './ClickTracker';
+import Login from './Login';
 // Modificare il componente Counter in modo 
 // che l'intervallo venga inizializzato all'interno del metodo del ciclo di vita 
 // componentDidMount anziché nel costruttore. 
@@ -15,6 +16,7 @@ function App() {
         <InteractiveWelcome />
         <Counter />
         <ClickTracker/>
+        <Login />
       </header>
     </div>
   );
