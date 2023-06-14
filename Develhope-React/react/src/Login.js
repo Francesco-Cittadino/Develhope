@@ -14,6 +14,12 @@ class Login extends React.Component {
         })
         console.log(name, value)
     }
+    handleReset = () => {
+        this.setState({
+            username: "",
+            password: "",
+        })
+    }
 
 
     render() {
@@ -23,13 +29,19 @@ class Login extends React.Component {
                 <input name="password" type="password" value={this.state.password} onChange={this.handleChange} />
                 {
                     this.state.username !== "" && this.state.password !== "" ?
-                        <button onClick={this.handleLogin}>
-                            Login
-                        </button>
+                        <div>
+                            <button onClick={this.handleLogin}>
+                                Login
+                            </button>
+                            <button onClick={this.handleReset}>Reset</button>
+                        </div>
                         :
-                        <button onClick={this.handleLogin} disabled={this.state.disabled}>
-                            Login
-                        </button>
+                        <div>
+                            <button onClick={this.handleLogin} disabled={this.state.disabled}>
+                                Login
+                            </button>
+                            <button onClick={this.handleReset} disabled={this.state.disabled}>Reset</button>
+                        </div>
                 }
             </div>
         );
