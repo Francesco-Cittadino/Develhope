@@ -4,10 +4,8 @@ import InteractiveWelcome from './InteractiveWelcome ';
 import Counter from "./Counter";
 import ClickTracker from './ClickTracker';
 import Login from './Login';
-// Modificare il componente Counter in modo 
-// che l'intervallo venga inizializzato all'interno del metodo del ciclo di vita 
-// componentDidMount anziché nel costruttore. 
-// Il costruttore è ancora richiesto?
+import UncontrolledLogin from './UncontrolledLogin'
+
 function App() {
   return (
     <div className="App">
@@ -17,6 +15,7 @@ function App() {
         <Counter />
         <ClickTracker/>
         <Login />
+        <UncontrolledLogin />
       </header>
     </div>
   );
