@@ -23,15 +23,26 @@ class TodoList extends React.Component {
         })
         // console.log(this.state.user)
     }
+    handleRes = (event) => {
+       const id = event.target.id;
+       
+       
+       this.setState({
+           user: this.state.user.filter((el)=>
+               el !== id
+           ),
+       })
+    }
     render() {
         return (
             <div>
                 <input name="in" type="text" disabled={this.state.disable} onChange={this.handleChange} value={this.state.ciao} />
-                <input name="genera" type="submit" onClick={this.handleGen} value="invia" />
+                <input name="genera" type="submit" onClick={this.handleGen} value="add" />
+                
                 <ul>
 
                     {this.state.user.map((el, index) =>
-                        (<li key={index}>{el}</li>)
+                        (<li key={index}>{el} <input id={el} name="remove" type="button" onClick={this.handleRes} value="remove" /></li>)
                     )}
                 </ul>
 

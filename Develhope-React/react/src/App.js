@@ -11,12 +11,12 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <InteractiveWelcome />
+        <div />
+        {/* <InteractiveWelcome />
         <Counter />
         <ClickTracker/>
         <Login />
-        <UncontrolledLogin />
+        <UncontrolledLogin /> */}
         <TodoList />
       </header>
     </div>
