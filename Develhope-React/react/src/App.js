@@ -5,6 +5,7 @@ import Counter from "./Counter";
 import ClickTracker from './ClickTracker';
 import Login from './Login';
 import UncontrolledLogin from './UncontrolledLogin'
+import TodoList from './TodoList'
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <ClickTracker/>
         <Login />
         <UncontrolledLogin />
+        <TodoList />
       </header>
     </div>
   );
