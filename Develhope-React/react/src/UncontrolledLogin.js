@@ -7,6 +7,7 @@ class UncontrolledLogin extends React.Component {
         this.input = React.createRef();
         this.pass = React.createRef();
       }
+ 
     
       handleSubmit(event) {
         alert('il nome inserito è: ' + this.input.current.value);
@@ -16,8 +17,9 @@ class UncontrolledLogin extends React.Component {
       }
     render() {
         return (
+            
             <form onSubmit={this.handleSubmit}>
-                <input type="text" ref={this.input} />
+                <input autoFocus type="text" ref={this.input} />
                 <input type="password" ref={this.pass} />
                 <button type="submit">Submit</button>
             </form>
