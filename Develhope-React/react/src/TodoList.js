@@ -1,12 +1,15 @@
 import React from "react";
 
 class TodoList extends React.Component {
-    state = {
-        user: ["uno", "due", "tre", "quattro", "cinque"],
-        val: "",
-        disable: false,
+   constructor(props){
+    super(props);
+       this.state = {
+           user: ["uno", "due"],
+           val: "",
+           disable: false,
+        }
     }
-
+        
     handleChange = (event) => {;
         const value = event.target.value;
         this.setState({

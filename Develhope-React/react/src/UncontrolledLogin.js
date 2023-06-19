@@ -15,6 +15,7 @@ class UncontrolledLogin extends React.Component {
         console.log('la password inserita è: ' + this.pass.current.value);
         event.preventDefault();
       }
+      
     render() {
         return (
             
