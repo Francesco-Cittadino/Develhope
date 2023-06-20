@@ -11,7 +11,12 @@ import { useState } from 'react';
 
 
 function App() {
-  const [lang, setLang] = useState('')
+  const [lang, setLang] = useState('en');
+  function handleLanguageChange(event){
+    setLang({language: event.target.value})
+  }
+
+  
   return (
     <div className="App">
       <header className="App-header">
@@ -21,7 +26,7 @@ function App() {
       <UncontrolledLogin /> */}
       <Login />
       <Counter />
-        <select value={lang}>
+        <select value={lang.language} onChange={handleLanguageChange}>
           <option>Italiano</option>
           <option>English</option>
         </select>
