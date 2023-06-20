@@ -1,51 +1,53 @@
-import React from 'react';
+import {useState} from 'react';
 
-class Login extends React.Component {
-    state = {
+function Login(props){
+    const [data, setData] = useState({
         username: "",
         password: "",
-        disabled: true,
-    }
+        disabled: false,
+    })
    
-    handleChange = (event) => {
+    function handleChange (event){
         const value = event.target.value;
         const name = event.target.name;
-        this.setState({
+        setData({
             [name]: value,
         })
         console.log(name, value)
     }
-    handleReset = () => {
-        this.setState({
+   const handleReset = (data) => {
+        setData({
             username: "",
             password: "",
         })
     }
+   function handleLogin (data){
+       alert("benvenuto ", data.username)
+    }
 
-    render() {
         return (
             <div>
-                <input name="username" type="text" value={this.state.username} onChange={this.handleChange} />
-                <input name="password" type="password" value={this.state.password} onChange={this.handleChange} />
+                <input name="username" type="text" value={data.username} onChange={handleChange} />
+                <input name="password" type="password" value={data.password} onChange={handleChange} />
                 {
-                    this.state.username !== "" && this.state.password !== "" ?
+                    data.username !== "" && data.password !== "" ?
                         <div>
-                            <button onClick={this.handleLogin}>
+                            <button onClick={handleLogin}>
                                 Login
                             </button>
-                            <button onClick={this.handleReset}>Reset</button>
+                            <button onClick={handleReset}>Reset</button>
                         </div>
                         :
                         <div>
-                            <button onClick={this.handleLogin} disabled={this.state.disabled}>
+                            <button onClick={handleLogin} disabled={data.disabled}>
                                 Login
                             </button>
-                            <button onClick={this.handleReset} disabled={this.state.disabled}>Reset</button>
+                            <button onClick={handleReset} disabled={data.disabled}>Reset</button>
                         </div>
                 }
             </div>
         );
-    }
+    
 }
 
 export default Login;

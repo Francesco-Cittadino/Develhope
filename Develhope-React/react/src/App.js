@@ -17,9 +17,9 @@ function App() {
       <header className="App-header">
         <div />
         {/* <InteractiveWelcome />
-        <Login />
         <ClickTracker />
       <UncontrolledLogin /> */}
+      <Login />
       <Counter />
         <select value={lang}>
           <option>Italiano</option>
