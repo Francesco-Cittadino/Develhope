@@ -24,7 +24,7 @@ function App() {
         <div />
         <button onClick={handleShow}>toggleCounter</button>
         {showCounter && <Counter />}  
-        <GithubUser usename="francescocittadino"/>
+        <GithubUser />
       </header>
     </div>
   );
