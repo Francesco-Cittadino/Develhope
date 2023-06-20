@@ -8,6 +8,7 @@ import UncontrolledLogin from './UncontrolledLogin'
 import { LanguageContext } from './LanguageContext'
 import TodoList from './TodoList'
 import { useState } from 'react';
+import { GithubUser } from './GithubUser';
 // import { DisplayLanguage } from './DisplayLanguage';
 
 
@@ -23,6 +24,7 @@ function App() {
         <div />
         <button onClick={handleShow}>toggleCounter</button>
         {showCounter && <Counter />}  
+        <GithubUser usename="francescocittadino"/>
       </header>
     </div>
   );
