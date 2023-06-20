@@ -5,36 +5,24 @@ import Counter from "./Counter";
 import ClickTracker from './ClickTracker';
 import Login from './Login';
 import UncontrolledLogin from './UncontrolledLogin'
-import {LanguageContext} from './LanguageContext'
+import { LanguageContext } from './LanguageContext'
 import TodoList from './TodoList'
 import { useState } from 'react';
 // import { DisplayLanguage } from './DisplayLanguage';
 
 
-
 function App() {
-  const [lang, setLang] = useState('en');
-  function handleLanguageChange(event){
-    setLang({language: event.target.value})
-  }
-
+  const [showCounter, setShowCounter] = useState(true);
   
+  function handleShow (){
+    setShowCounter( s => !s)
+  }
   return (
     <div className="App">
       <header className="App-header">
         <div />
-        {/* <InteractiveWelcome />
-        <TodoList />
-        <ClickTracker />
-      <Login />
-       <select value={lang.language} onChange={handleLanguageChange}>
-          <option>Italiano</option>
-          <option>English</option>
-        </select>
-      <UncontrolledLogin /> */}
-      <Counter />
-       
-     
+        <button onClick={handleShow}>toggleCounter</button>
+        {showCounter && <Counter />}  
       </header>
     </div>
   );
