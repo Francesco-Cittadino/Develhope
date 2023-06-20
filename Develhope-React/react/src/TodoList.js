@@ -1,16 +1,17 @@
 import React from "react";
 
 class TodoList extends React.Component {
-   constructor(props){
-    super(props);
-       this.state = {
-           user: ["uno", "due"],
-           val: "",
-           disable: false,
+    constructor(props) {
+        super(props);
+        this.state = {
+            user: ["uno", "due"],
+            val: "",
+            disable: false,
         }
     }
-        
-    handleChange = (event) => {;
+
+    handleChange = (event) => {
+        ;
         const value = event.target.value;
         this.setState({
             val: value,
@@ -38,26 +39,13 @@ class TodoList extends React.Component {
     render() {
         return (
             <div>
-                <input name="in"
-                    type="text"
-                    // disabled={this.state.disable}
-                    onChange={this.handleChange}
-                    value={this.state.val} />
-                <input name="genera"
-                    type="submit"
-                    onClick={this.handleGen}
-                    value="add" />
+                <input name="in" type="text" onChange={this.handleChange} value={this.state.val} />
+                <input name="genera" type="submit" onClick={this.handleGen} value="add" />
+
                 <ul>
-                    {this.state.user.map((el, index) => (
-                        <li key={index}>
-                            {el}
-                            <input id={el}
-                                name="remove" 
-                                type="button"
-                                onClick={this.handleRes}
-                                value="remove" />
-                        </li>)
-                    )}
+                    {this.state.user.map((el, index) =>
+                    (<li key={index}> {el}
+                        <input id={el} name="remove" type="button" onClick={this.handleRes} value="remove" /></li>))}
                 </ul>
 
             </div>

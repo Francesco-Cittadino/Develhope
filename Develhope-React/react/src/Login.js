@@ -6,6 +6,7 @@ class Login extends React.Component {
         password: "",
         disabled: true,
     }
+   
     handleChange = (event) => {
         const value = event.target.value;
         const name = event.target.name;
@@ -20,7 +21,6 @@ class Login extends React.Component {
             password: "",
         })
     }
-
 
     render() {
         return (
