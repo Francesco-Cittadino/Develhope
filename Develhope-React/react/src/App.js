@@ -5,8 +5,10 @@ import Counter from "./Counter";
 import ClickTracker from './ClickTracker';
 import Login from './Login';
 import UncontrolledLogin from './UncontrolledLogin'
+import {LanguageContext} from './LanguageContext'
 import TodoList from './TodoList'
 import { useState } from 'react';
+// import { DisplayLanguage } from './DisplayLanguage';
 
 
 
@@ -22,15 +24,17 @@ function App() {
       <header className="App-header">
         <div />
         {/* <InteractiveWelcome />
+        <TodoList />
         <ClickTracker />
-      <UncontrolledLogin /> */}
       <Login />
-      <Counter />
-        <select value={lang.language} onChange={handleLanguageChange}>
+       <select value={lang.language} onChange={handleLanguageChange}>
           <option>Italiano</option>
           <option>English</option>
         </select>
-        <TodoList />
+      <UncontrolledLogin /> */}
+      <Counter />
+       
+     
       </header>
     </div>
   );
