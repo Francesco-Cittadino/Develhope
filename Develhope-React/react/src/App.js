@@ -1,6 +1,6 @@
 import './App.css';
 import { useState } from 'react';
-import { DisplayLanguageFunc, LanguageContext } from './DisplayLanguageFunc';
+import {HookCounter} from './HookCounter'
 
 
 function App() {
@@ -11,18 +11,11 @@ function App() {
     setLanguage(event.target.value)
   }
   return (
-    <div className="App">
-      <header className="App-header">
-        <select onChange={handleLanguageChange}>
-          <option value="en">English</option>
-          <option value="it">Italiano</option>
-        </select>
-        <LanguageContext.Provider value={language}>
-          <DisplayLanguageFunc />
-        </LanguageContext.Provider>
-        {/* <GithubUser username="francesco-cittadino" /> */}
-      </header>
-    </div>
+    <header className="App-header">
+      <div className="App">
+        <HookCounter initialValue={54} />
+      </div>
+    </header>
   );
 }
 
