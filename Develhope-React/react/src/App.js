@@ -16,6 +16,7 @@ import { GithubUserForm } from './GithubUserUno';
 function App() {
   const [showCounter, setShowCounter] = useState(true);
   
+  
   function handleShow (){
     setShowCounter( s => !s)
   }
@@ -26,8 +27,10 @@ function App() {
         {showCounter && <Counter />}  
         <Counter />
         <GithubUserForm username='francesco-cittadino' />
-        <GithubUser /> */}
         <Login />
+      */}
+        
+        <GithubUser username="francesco-cittadino" />
       </header>
     </div>
   );
