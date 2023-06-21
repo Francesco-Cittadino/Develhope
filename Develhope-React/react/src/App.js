@@ -3,12 +3,13 @@ import './App.css';
 import InteractiveWelcome from './InteractiveWelcome ';
 import {Counter} from "./Counter";
 import ClickTracker from './ClickTracker';
-import Login from './Login';
+import {Login} from './Login';
 import UncontrolledLogin from './UncontrolledLogin'
 import { LanguageContext } from './LanguageContext'
 import TodoList from './TodoList'
 import { useState } from 'react';
 import { GithubUser } from './GithubUser';
+import { GithubUserForm } from './GithubUserUno';
 // import { DisplayLanguage } from './DisplayLanguage';
 
 
@@ -23,8 +24,10 @@ function App() {
       <header className="App-header">
         {/* <button onClick={handleShow}>toggleCounter</button>
         {showCounter && <Counter />}  
-        <GithubUser /> */}
         <Counter />
+        <GithubUserForm username='francesco-cittadino' />
+        <GithubUser /> */}
+        <Login />
       </header>
     </div>
   );
