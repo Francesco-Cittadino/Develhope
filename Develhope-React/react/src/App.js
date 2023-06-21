@@ -1,38 +1,31 @@
 import logo from './logo.svg';
 import './App.css';
-import InteractiveWelcome from './InteractiveWelcome ';
-import {Counter} from "./Counter";
-import ClickTracker from './ClickTracker';
-import {Login} from './Login';
-import UncontrolledLogin from './UncontrolledLogin'
-import { LanguageContext } from './LanguageContext'
 import TodoList from './TodoList'
 import { useState } from 'react';
 import { GithubUser } from './GithubUser';
 import { GithubUserForm } from './GithubUserUno';
-import {CarDetails} from './CarDetails'
-// import { DisplayLanguage } from './DisplayLanguage';
+// import { CarDetails } from './CarDetails'
+import { DisplayLanguageFunc, LanguageContext } from './DisplayLanguageFunc';
 
 
 function App() {
-  const [showCounter, setShowCounter] = useState(true);
-  
-  
-  function handleShow (){
-    setShowCounter( s => !s)
+
+  const [language, setLanguage] = useState('en');
+
+  function handleLanguageChange(event) {
+    setLanguage(event.target.value)
   }
   return (
     <div className="App">
       <header className="App-header">
-        {/* <button onClick={handleShow}>toggleCounter</button>
-        {showCounter && <Counter />}  
-        <Counter />
-        <GithubUserForm username='francesco-cittadino' />
-        <Login />
-      */}
-        
-        <GithubUser username="francesco-cittadino" />
-        
+        <select onChange={handleLanguageChange}>
+          <option value="en">English</option>
+          <option value="it">Italiano</option>
+        </select>
+        <LanguageContext.Provider value={language}>
+          <DisplayLanguageFunc />
+        </LanguageContext.Provider>
+        {/* <GithubUser username="francesco-cittadino" /> */}
       </header>
     </div>
   );

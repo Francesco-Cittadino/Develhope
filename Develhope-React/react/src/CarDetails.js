@@ -19,7 +19,7 @@ export function CarDetails({ initialData }) {
 //   console.log(refForm.current)
 
   return (
-    <form  onSubmit={handleSubmit}> 
+    <form> 
       <label> Model:
         <input
           type="text" name="model" ref={refFormModel} onChange={handleInputChange} />
