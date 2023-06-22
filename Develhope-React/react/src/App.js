@@ -4,6 +4,8 @@ import { ShowGithubUser } from './ShowGithubUser'
 import { Routes } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { Route } from "react-router-dom";
+import {CounterUno} from "./CountUno";
+import Welcome from "./Welcome";
 
 function App() {
 // useEffect(()=>{
@@ -14,8 +16,16 @@ function App() {
 // },[])
   return (
     <div>
+      <div>
+        <Link to='/'>home</Link>
+        <Link to='/Counter'>Counter</Link>
+        <Link to='/Welcome'>Welcome</Link>
+
+      </div>
       <Routes>
-        <Route path='/' element={<Link to='users/Francesco-Cittadino'>Nome</Link>} />
+
+        <Route path='/Welcome' element={<Welcome />}/>
+        <Route path='/Counter' element={<CounterUno />}/>
         <Route path='/users/:username' element={<ShowGithubUser />} />
       </Routes>
     </div>
