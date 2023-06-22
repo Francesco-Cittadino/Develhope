@@ -5,18 +5,19 @@ import { Routes } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { Route } from "react-router-dom";
 import { CounterUno } from "./CountUno";
+import { GithubUserForm } from "./GithubUserUno";
 import Welcome from "./Welcome";
 
 function App() {
   // useEffect(()=>{
-  //   fetch('https://api.github.com/users/Francesco-Cittadino')
-  //   .then((el)=>el.json())
-  //   .then((el)=>console.log(el))
-
-  // },[])
-  return (
-    <div>
+    //   fetch('https://api.github.com/users/Francesco-Cittadino')
+    //   .then((el)=>el.json())
+    //   .then((el)=>console.log(el))
+    
+    // },[])
+    return (
       <div>
+       <div>
         <div>
           <Link to='/'>home</Link>
         </div>

@@ -1,12 +1,17 @@
 import { useGithubUser } from "./useGithuhUser"
 
 export function GithubUserForm ({ username }) {
-    const {data} = useGithubUser(username)
- 
 
+    const {data, error, loading } = useGithubUser(username)
+    // function handleGetUserData(){
+    //     onFetchUser(username)
+    // }
     return(
         <div>
-             <h1 style={{color:'white'}}>{data}</h1>
+            <button>caricamento</button>
+            {loading && <h1>in caricamento</h1>}
+            {error && <h1>c'è stato un errore</h1>}
+            {data && <h1>{data.name}</h1>}
         </div>
     )
 }
