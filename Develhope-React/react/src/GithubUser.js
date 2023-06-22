@@ -5,7 +5,7 @@ export function GithubUser() {
 
   const [data, setData] = useState({
     username: '',
-    arr: ['francescocittadino', 'pasquale']
+    arr: []
   });
 
   function handleChange (event) {

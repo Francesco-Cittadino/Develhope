@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 export function GithubUserList(props) {
 
@@ -6,7 +7,7 @@ export function GithubUserList(props) {
         <div>
             <ul>
                 {props.lista.map((el, index) =>
-                (<li key={index}> {el}</li>))}
+                (<li key={index}><Link to={`/users/${el}`}>{el}</Link></li>))}
             </ul>
         </div>
     )

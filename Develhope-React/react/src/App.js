@@ -26,6 +26,9 @@ function App() {
         <div>
           <Link to='/Welcome'>Welcome</Link>
         </div>
+        <div>
+          <Link to='/Users'>Users</Link>
+        </div>
       </div>
       <Routes>
         <Route path='*' element={
@@ -37,7 +40,7 @@ function App() {
         <Route path='/' element={<CounterUno />} />
         <Route path='/Welcome' element={<Welcome />} />
         <Route path='/Counter' element={<CounterUno />} />
-        <Route path='/users/:username' element={<ShowGithubUser />} />
+        <Route path='/Users' element={<ShowGithubUser />} />
       </Routes>
     </div>
   );
