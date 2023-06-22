@@ -2,7 +2,7 @@ import { useState } from "react";
 import { GithubUserList } from "./GithubUserList";
 
 export function GithubUser() {
-  // const [username, setUsername] = useState('');
+
   const [data, setData] = useState({
     username: '',
     arr: ['francescocittadino', 'pasquale']
@@ -28,7 +28,6 @@ export function GithubUser() {
 
   return (
     <div>
-      {/* <input value={username} onChange={(e)=>setUsername(e.target.value)} /> */}
       <input name="usernames" type="text" onChange={handleChange} value={data.username} />
       <button type="submit" onClick={handleGen}>Aggiungi</button>
       <GithubUserList lista={data.arr}/>
