@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 
 export function GithubUserList(props) {
 
@@ -9,6 +9,8 @@ export function GithubUserList(props) {
                 {props.lista.map((el, index) =>
                 (<li key={index}><Link to={`/users/${el}`}>{el}</Link></li>))}
             </ul>
+            <hr />
+            <Outlet />
         </div>
     )
 }

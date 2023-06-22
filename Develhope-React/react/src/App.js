@@ -40,8 +40,11 @@ function App() {
         <Route path='/' element={<CounterUno />} />
         <Route path='/Welcome' element={<Welcome />} />
         <Route path='/Counter' element={<CounterUno />} />
-        <Route path='/Users' element={<ShowGithubUser />} />
+        <Route path='/Users' element={<ShowGithubUser />}>
+        <Route  index element={<p>Add a user and select it</p>} />
+        </Route>
       </Routes>
+
     </div>
   );
 }
