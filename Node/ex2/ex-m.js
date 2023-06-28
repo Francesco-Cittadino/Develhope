@@ -2,4 +2,4 @@ function ex(message){
     console.log(`questa è la funzione ${message}`)
 }
 
-module.export = ex; 
+module.exports = ex; 

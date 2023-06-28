@@ -1,2 +1,2 @@
-const ex = require("./ex");
-ex("esportata")
+const ex = require("./ex-m.js");
+ex("esportata");
