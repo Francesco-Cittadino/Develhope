@@ -19,7 +19,6 @@ function luckyDraw(player) {
   });
 }
 
-
 Promise.all([
   luckyDraw('Joe'),
   luckyDraw('Caroline'),
