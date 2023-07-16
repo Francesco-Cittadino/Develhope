@@ -19,4 +19,4 @@ app.put('/api/planet:id', updateByid )
 app.delete('/api/planet:id', deleteById)
 
 
-app.listen(process.env.PORT, () => console.log(`Server listening at port ${process.env.PORT}`))
+app.listen(port)
