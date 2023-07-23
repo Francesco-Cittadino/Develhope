@@ -10,7 +10,7 @@ type Planet = {
 
 type Planets = Planet[];
 
-export const db = pgp(
+const db = pgp(
   "postgres://postgres:dbAccess@localhost:5432/video"
 );
 const setupDatabase = async () => {
