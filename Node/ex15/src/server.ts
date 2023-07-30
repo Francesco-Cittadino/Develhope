@@ -27,16 +27,12 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage });
 
-// init an express app
 const app = express();
 
-// morgan will log Client's requests
 app.use(morgan("dev"));
 
-// accept JSON from Client
 app.use(express.json());
 
-// get the port from local environment file .env
 const { PORT } = process.env;
 
 app.get("/api/planets", getAll);
@@ -47,7 +43,7 @@ app.delete("/api/planets/:id", deleteById);
 
 app.post("/api/planets/:id/image", upload.single("image"), createImage);
 
-// start the server listening
+
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });
